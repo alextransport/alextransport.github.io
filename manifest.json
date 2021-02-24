@@ -1,11 +1,11 @@
 {
-    "name": "alexmainweb",
-    "short_name": "alexmainweb",
+    "name": "الاسكندرية للنقل البرى",
+    "short_name": "الاسكندرية للنقل البرى",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter application.",
+    "description": "الاسكندرية للنقل البرى",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
