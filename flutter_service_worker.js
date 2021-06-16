@@ -5,11 +5,11 @@ const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "version.json": "cd604e94dea70763f094f36007484a6b",
-"index.html": "20e9d990740c3f284a195b0afaad1827",
-"/": "20e9d990740c3f284a195b0afaad1827",
-"manifest.json": "92d4c8101b0f194e2a45de34e50b1352",
-"main.dart.js": "4618c2b7e40e92a7b41b0ba688a705cc",
-"assets/FontManifest.json": "a716385cb7220baed765798892946b83",
+"index.html": "69ffec339fac2e82f0127a1f9517b033",
+"/": "69ffec339fac2e82f0127a1f9517b033",
+"manifest.json": "13ed402cb66dbb845a6bfeb06ff789b9",
+"main.dart.js": "99d2ae1f35dbaced9b712b19fe8641b9",
+"assets/FontManifest.json": "3eca9ec8db013f1a73526a92e8ee0096",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
 "assets/packages/awesome_dialog/assets/flare/warning.flr": "68898234dacef62093ae95ff4772509b",
 "assets/packages/awesome_dialog/assets/flare/info_without_loop.flr": "cf106e19d7dee9846bbc1ac29296a43f",
@@ -19,8 +19,8 @@ const RESOURCES = {
 "assets/packages/awesome_dialog/assets/flare/info.flr": "bc654ba9a96055d7309f0922746fe7a7",
 "assets/packages/awesome_dialog/assets/flare/succes_without_loop.flr": "3d8b3b3552370677bf3fb55d0d56a152",
 "assets/packages/awesome_dialog/assets/flare/error.flr": "87d83833748ad4425a01986f2821a75b",
-"assets/AssetManifest.json": "64b1f4222e20ad5561daac6d5bbb2e4c",
-"assets/NOTICES": "613036e0566ce51c186b3cec83e42dfb",
+"assets/AssetManifest.json": "0a91b96b0f38e0d41aa9d663b61dd0dc",
+"assets/NOTICES": "c0d2e3e770f1da2ffa19d78cac10187c",
 "assets/assets/4.m4a": "43090033733a527ba298df7950876179",
 "assets/assets/3.m4a": "b35e9ba5aa80f711842be08122fb06cb",
 "assets/assets/2.m4a": "b9e4137d34dc060c62f72cb7684e5ee5",
@@ -31,12 +31,9 @@ const RESOURCES = {
 "assets/assets/card.jpeg": "05f87b380e27d6827be9f6658ffbb0e8",
 "assets/assets/logo.jpg": "087a7eeb985d9eaef2c5914ef987f20d",
 "assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
-"assets/fonts/aa.ttf": "ff0131af4e51059f7252f9d17bed1060",
-"assets/fonts/dd.ttf": "81b37df3b28d397659607391993eef22",
 "assets/fonts/Cairor.ttf": "ff8fa0e134d04ac50030e27cefcf7a4c",
 "assets/fonts/Cairo.ttf": "2edd7ee30421da9700b12928ac0073db",
 "assets/fonts/cc.ttf": "71b4de66bd8bb9eec0c1e27914c5f546",
-"assets/fonts/bb.ttf": "c3298605da35af3b8c020d7bce7e3876",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1"
 };
@@ -56,7 +53,7 @@ self.addEventListener("install", (event) => {
   return event.waitUntil(
     caches.open(TEMP).then((cache) => {
       return cache.addAll(
-        CORE.map((value) => new Request(value + '?revision=' + RESOURCES[value], {'cache': 'reload'})));
+        CORE.map((value) => new Request(value, {'cache': 'reload'})));
     })
   );
 });
